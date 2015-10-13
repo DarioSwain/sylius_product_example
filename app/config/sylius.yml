@@ -1,0 +1,31 @@
+sylius_product:
+    classes:
+        product:
+            model: Sylius\Component\Product\Model\Product
+            controller: Sylius\Bundle\ProductBundle\Controller\ProductController
+            repository: Sylius\Bundle\ProductBundle\Doctrine\ORM\ProductRepository
+            form:
+                default: Sylius\Bundle\ProductBundle\Form\Type\ProductType
+
+sylius_archetype:
+    classes:
+        product:
+            subject: Sylius\Component\Product\Model\Product
+            attribute: Sylius\Component\Product\Model\Attribute
+            option: Sylius\Component\Product\Model\Option
+            archetype:
+                model: Sylius\Component\Product\Model\Archetype
+
+sylius_attribute: ~
+
+sylius_variation:
+    classes:
+        product:
+            variant:
+                model: Sylius\Component\Product\Model\Variant
+                repository: Sylius\Bundle\ProductBundle\Doctrine\ORM\VariantRepository
+                form:
+                    default: Sylius\Bundle\ProductBundle\Form\Type\VariantType
+
+sylius_translation:
+    default_locale: %locale%
